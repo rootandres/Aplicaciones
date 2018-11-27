@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imgMario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btArriba"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mario" />
+
+    <Button
+        android:id="@+id/btArriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arriba"
+        app:layout_constraintBottom_toTopOf="@+id/btIzquierda"
+        app:layout_constraintStart_toEndOf="@+id/btIzquierda" />
+
+    <Button
+        android:id="@+id/btAbajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abajo"
+        app:layout_constraintStart_toEndOf="@+id/btIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/btIzquierda" />
+
+    <Button
+        android:id="@+id/btIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="78dp"
+        android:text="Izquierda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMario" />
+
+    <Button
+        android:id="@+id/btDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Derecha"
+        app:layout_constraintStart_toEndOf="@+id/btAbajo"
+        app:layout_constraintTop_toBottomOf="@+id/btArriba" />
+
+</android.support.constraint.ConstraintLayout>
