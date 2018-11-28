@@ -6,13 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btIzquierda"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="6dp"
+        android:text="IZQ"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btDerecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgOvni" />
 
+    <Button
+        android:id="@+id/btDerecha"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="6dp"
+        android:text="DER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btInicio"
+        app:layout_constraintStart_toEndOf="@+id/btIzquierda" />
+
+    <Button
+        android:id="@+id/btInicio"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="6dp"
+        android:text="INICIO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btDisparar"
+        app:layout_constraintStart_toEndOf="@+id/btDerecha"
+        app:layout_constraintTop_toBottomOf="@+id/imgMisil" />
+
+    <Button
+        android:id="@+id/btDisparar"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="Disparar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btInicio"
+        app:layout_constraintTop_toBottomOf="@+id/imgExplosion" />
+
+    <ImageView
+        android:id="@+id/imgMisil"
+        android:layout_width="52dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/btInicio"
+        app:layout_constraintEnd_toStartOf="@+id/btInicio"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="@+id/btInicio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/misil" />
+
+    <ImageView
+        android:id="@+id/imgOvni"
+        android:layout_width="58dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="364dp"
+        app:layout_constraintBottom_toTopOf="@+id/btIzquierda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ovni" />
+
+    <ImageView
+        android:id="@+id/imgExplosion"
+        android:layout_width="39dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="236dp"
+        app:layout_constraintBottom_toTopOf="@+id/btDisparar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/explosion" />
 </android.support.constraint.ConstraintLayout>
